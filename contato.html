@@ -57,6 +57,15 @@
                     <label for="nomeCompleto">Seu nome completo:</label>
                     <input type="text" id="nomeCompleto" name="nomeCompleto" required
                         placeholder="Digite seu nome completo aqui...">
+
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto" id="assunto">
+                        <option value="serviços">Serviço</option>
+                        <option value="duvidas">Dúvidas</option>
+                        <option value="sugestão">Sugestão</option>
+                        <option value="outros">Outros</option>
+                    </select>
+
                     <label for="mensagem">Sua mensagem:</label>
                     <textarea id="mensagem" name="mensagem" rows="10" cols="70" required
                         placeholder="Digite a sua mensagem aqui..."></textarea>
@@ -64,6 +73,7 @@
                     <button type="submit" id="enviarmensagem">Enviar Mensagem</button>
                 </form>
             </div>
+
         </section>
     </main>
     <script src="script/script-contato.js"></script>
