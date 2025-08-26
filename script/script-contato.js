@@ -23,8 +23,8 @@ document.getElementById('formContato').addEventListener('submit', function (even
     const nomeCompleto = document.getElementById('nomeCompleto').value;
     
     // Concatena o nome e a mensagem original com uma quebra de linha.
-    // O '%0A' é o código para quebra de linha em URLs.
-    const mensagemFinal = `Nome: ${nomeCompleto}%0A%0A${mensagem}`;
+    const mensagemFinal = `Nome: ${nomeCompleto}\n\n${mensagem}`;
+    
     const mensagemFinalCodificada = encodeURIComponent(mensagemFinal);
 
     // Constrói o assunto da mensagem
