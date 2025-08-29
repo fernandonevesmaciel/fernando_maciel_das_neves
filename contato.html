@@ -12,7 +12,7 @@
 </head>
 
 <body>
-         <header>
+    <header>
         <nav class="navbar">
             <div class="logo">
                 <h2><span style="color: white; font-size: larger;">F</span>ernando<span
@@ -29,7 +29,7 @@
                 <ul class="nav-principal">
                     <li><a href="index.html" class="menu">Home</a></li>
                     <li><a href="sobremim.html" class="menu">Sobre mim</a></li>
-                    <li><a href="#" class="menu">Projetos</a></li>
+                    <li><a href="projeto.html" class="menu">Projetos</a></li>
                     <li><a href="conhecimentos.html" class="menu">Conhecimentos</a></li>
                     <li><a href="contato.html" class="menu selecionado">Contato</a></li>
                 </ul>
@@ -76,7 +76,41 @@
 
         </section>
     </main>
-    <script src="script/script-contato.js"></script>
+    <script src="script/script.js"></script>
+    <script>
+        document.getElementById('formContato').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita que o formulário recarregue a página
+
+            const meio = document.getElementById('meioComunicacao').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const nomeCompleto = document.getElementById('nomeCompleto').value;
+            const selectAssunto = document.getElementById('assunto').value;
+
+            // Concatena o nome e a mensagem original com uma quebra de linha.
+            const mensagemFinal = `Nome: ${nomeCompleto}\n\n Assunto: ${selectAssunto}\n\n Mensagem: ${mensagem}`;
+
+            const mensagemFinalCodificada = encodeURIComponent(mensagemFinal);
+
+            // Constrói o assunto da mensagem
+            const assunto = "Mensagem do Site";
+            const assuntoCodificado = encodeURIComponent(assunto);
+
+
+            // Verifique o meio de comunicação escolhido e redirecione
+            if (meio === 'email') {
+                window.location.href = `mailto:fernandonevesmaciel@gmail.com?subject=${assuntoCodificado}&body=${mensagemFinalCodificada}`;
+
+            } else if (meio === 'whatsapp') {
+                const numeroWhatsApp = '5543991795542';
+                window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagemFinalCodificada}`, '_blank');
+            } else if (meio === 'telegram') {
+                const usuarioTelegram = 'fernandomneves';
+                window.open(`https://t.me/${usuarioTelegram}?text=${mensagemFinalCodificada}`, '_blank');
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>
