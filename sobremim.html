@@ -2,23 +2,28 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio Pessoal</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+    <title>Portifolio Pessoal</title> <!-- Título da página -->
+    <!-- Link para ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link para arquivo CSS local -->
     <link rel="stylesheet" href="style.css">
+    <!-- Link para fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-         <header>
+    <header>
         <nav class="navbar">
             <div class="logo">
+                <!-- Logo com destaque nas letras F e M -->
                 <h2><span style="color: white; font-size: larger;">F</span>ernando<span
                         style="color: white; font-size: larger;">M</span>aciel</h2>
             </div>
 
+            <!-- Botão "hamburguer" para menu responsivo em dispositivos móveis -->
             <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
@@ -26,13 +31,15 @@
             </button>
 
             <div class="nav-links">
+                <!-- Menu principal de navegação -->
                 <ul class="nav-principal">
                     <li><a href="index.html" class="menu">Home</a></li>
-                    <li><a href="sobremim.html" class="menu selecionado">Sobre mim</a></li>
+                    <li><a href="sobremim.html" class="menu selecionado">Sobre mim</a></li> <!-- Página atual destacada -->
                     <li><a href="projeto.html" class="menu">Projetos</a></li>
                     <li><a href="conhecimentos.html" class="menu">Conhecimentos</a></li>
                     <li><a href="contato.html" class="menu">Contato</a></li>
                 </ul>
+                <!-- Links para redes sociais com ícones -->
                 <ul class="nav-social nav-social-links">
                     <li><a href="https://www.instagram.com/fernando_macielneves/" target="_blank"
                             class="icone_menu instagram"><i class="fa-brands fa-instagram instagram"></i></a></li>
@@ -49,10 +56,13 @@
     <main>
         <section class="container card-sobremim">
             <div>
+                <!-- Imagem de perfil -->
                 <img src="imagens/imagem_perfil.jpg" alt="minha_imagem" id="imagem_perfil">
             </div>
             <div class="sobremim">
+                <!-- Título da seção com destaque na letra S -->
                 <h2><span style="color: white; font-size: larger;">S</span>obre mim</h2>
+                <!-- Texto de apresentação pessoal -->
                 <p>
                     Trabalho há 8 anos como eletricista industrial, sou formado em
                     Eletromecânica pelo SENAI e
@@ -61,10 +71,12 @@
                     Estou cursando Análise e Desenvolvimento de Sistemas pela Uninter e tenho grande interesse em unir
                     minha experiência na indústria com o desenvolvimento de sistemas e soluções digitais.
 
-                    Busco sempre aprender, evoluir e aplicar meus conhecimentos em projetos que façam a diferença..</p>
+                    Busco sempre aprender, evoluir e aplicar meus conhecimentos em projetos que façam a diferença.
+                </p>
             </div>
         </section>
     </main>
+    <!-- Script JavaScript para funcionalidades da página com menu "hamburguer" -->
     <script src="script/script.js"></script>
 </body>
 

@@ -2,11 +2,15 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio Pessoal</title>
+    <!-- Responsividade para dispositivos móveis -->
+    <title>Portifolio Pessoal</title> <!-- Título da página -->
+    <!-- Link para ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link para arquivo CSS local -->
     <link rel="stylesheet" href="style.css">
+    <!-- Link para fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
 </head>
@@ -15,10 +19,12 @@
     <header>
         <nav class="navbar">
             <div class="logo">
+                <!-- Logo com destaque nas letras F e M -->
                 <h2><span style="color: white; font-size: larger;">F</span>ernando<span
                         style="color: white; font-size: larger;">M</span>aciel</h2>
             </div>
 
+            <!-- Botão "hamburguer" para menu responsivo em dispositivos móveis -->
             <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
@@ -26,13 +32,15 @@
             </button>
 
             <div class="nav-links">
+                <!-- Menu principal de navegação -->
                 <ul class="nav-principal">
                     <li><a href="index.html" class="menu">Home</a></li>
                     <li><a href="sobremim.html" class="menu">Sobre mim</a></li>
                     <li><a href="projeto.html" class="menu">Projetos</a></li>
                     <li><a href="conhecimentos.html" class="menu">Conhecimentos</a></li>
-                    <li><a href="contato.html" class="menu selecionado">Contato</a></li>
+                    <li><a href="contato.html" class="menu selecionado">Contato</a></li> <!-- Página atual destacada -->
                 </ul>
+                <!-- Links para redes sociais com ícones -->
                 <ul class="nav-social nav-social-links">
                     <li><a href="https://www.instagram.com/fernando_macielneves/" target="_blank"
                             class="icone_menu instagram"><i class="fa-brands fa-instagram instagram"></i></a></li>
@@ -48,12 +56,14 @@
     <main>
         <section class="container">
             <div class="card-contato">
+                <!-- Formulário de contato -->
                 <form id="formContato">
                     <label for="meioComunicacao">Escolha o meio de comunicação:</label>
                     <select id="meioComunicacao" name="meioComunicacao">
                         <option value="whatsapp">WhatsApp </option>
                         <option value="telegram">Telegram</option>
                     </select>
+
                     <label for="nomeCompleto">Seu nome completo:</label>
                     <input type="text" id="nomeCompleto" name="nomeCompleto" required
                         placeholder="Digite seu nome completo aqui...">
@@ -76,40 +86,39 @@
 
         </section>
     </main>
+    <!-- Script JavaScript para funcionalidades da página com menu "hamburguer" -->
     <script src="script/script.js"></script>
     <script>
+        // Adiciona evento para o envio do formulário
         document.getElementById('formContato').addEventListener('submit', function (event) {
             event.preventDefault(); // Evita que o formulário recarregue a página
 
+            // Obtém os valores dos campos do formulário
             const meio = document.getElementById('meioComunicacao').value;
             const mensagem = document.getElementById('mensagem').value;
             const nomeCompleto = document.getElementById('nomeCompleto').value;
             const selectAssunto = document.getElementById('assunto').value;
 
-            // Concatena o nome e a mensagem original com uma quebra de linha.
+            // Monta a mensagem final com nome, assunto e mensagem
             const mensagemFinal = `Nome: ${nomeCompleto}\n\n Assunto: ${selectAssunto}\n\n Mensagem: ${mensagem}`;
 
+            // Codifica a mensagem para URL
             const mensagemFinalCodificada = encodeURIComponent(mensagemFinal);
 
-            // Constrói o assunto da mensagem
+            // Define o assunto do email
             const assunto = "Mensagem do Site";
             const assuntoCodificado = encodeURIComponent(assunto);
 
-
-            // Verifique o meio de comunicação escolhido e redirecione
-            if (meio === 'email') {
-                window.location.href = `mailto:fernandonevesmaciel@gmail.com?subject=${assuntoCodificado}&body=${mensagemFinalCodificada}`;
-
-            } else if (meio === 'whatsapp') {
+            if (meio === 'whatsapp') {
+                // Abre o WhatsApp Web com a mensagem pronta para envio
                 const numeroWhatsApp = '5543991795542';
                 window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagemFinalCodificada}`, '_blank');
             } else if (meio === 'telegram') {
+                // Abre o Telegram com a mensagem pronta para envio
                 const usuarioTelegram = 'fernandomneves';
                 window.open(`https://t.me/${usuarioTelegram}?text=${mensagemFinalCodificada}`, '_blank');
             }
         });
-
-
     </script>
 </body>
 
