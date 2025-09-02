@@ -1,12 +1,14 @@
 /* ==============================
     RESET BÁSICO
 ================================= */
+/* Remove margens e preenchimentos padrão e define box-sizing para border-box */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Define largura, altura, cor de fundo, fonte e cor do texto do body */
 body {
     width: 100%;
     height: 100%;
@@ -18,6 +20,7 @@ body {
 /* ==============================
     NAVBAR
 ================================= */
+/* Estiliza a barra de navegação com flexbox, espaçamento e borda inferior */
 nav {
     display: flex;
     justify-content: space-between;
@@ -28,51 +31,60 @@ nav {
     position: relative;
 }
 
+/* Estiliza o título dentro da navbar */
 nav h2 {
     color: #00BFFF;
     font-weight: bold;
 }
 
+/* Define o layout da lista de navegação como flex com espaçamento */
 nav ul {
     display: flex;
     gap: 25px;
 }
 
+/* Remove estilo padrão de lista dos itens */
 nav ul li {
     list-style: none;
 }
 
+/* Remove sublinhado e define cor e transição para links */
 a {
     text-decoration: none;
     color: #a5a5a5;
     transition: 0.3s;
 }
 
+/* Efeito hover para itens com classe menu */
 .menu:hover {
     color: #00BFFF;
     border-bottom: 2px solid #00BFFF;
     transform: scale(1.05);
 }
 
+/* Estilo para item selecionado na navbar */
 .selecionado {
     border-bottom: 2px solid #a59b9b;
     padding-bottom: 3px;
 }
 
-/* Ícones */
+/* Ícones - tamanho e transição */
 .icone_menu {
     font-size: 1.3em;
     transition: 0.3s;
 }
 
+/* Efeito hover para ícone do Instagram */
 .instagram i:hover {
     color: #c13584;
 }
 
+/* Efeito hover para ícone do GitHub */
 .github i:hover {
     color: #fff;
 }
 
+/* Efeito hover para ícone do LinkedIn */
 .linkedin i:hover {
     color: #0a66c2;
 }
@@ -80,6 +92,7 @@ a {
 /* ==============================
     APRESENTAÇÃO
 ================================= */
+/* Container principal da apresentação com flexbox e espaçamento */
 .container_apresentacao {
     display: flex;
     justify-content: space-evenly;
@@ -89,28 +102,32 @@ a {
     gap: 30px;
 }
 
+/* Conteúdo da apresentação em coluna com espaçamento */
 .conteudo_apresentacao {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Parágrafo com cor azul e tamanho maior */
 .conteudo_apresentacao p {
     color: #00BFFF;
     font-size: 1.2em;
 }
 
+/* Título principal da apresentação */
 .conteudo_apresentacao h2 {
     color: #e1e6e9;
     font-size: 2.5em;
 }
 
+/* Subtítulo da apresentação */
 .conteudo_apresentacao h3 {
     color: #a1a1a1;
     font-size: 1.3em;
 }
 
-/* Botões modernos */
+/* Botões e links com estilo moderno, borda arredondada e gradiente */
 button,
 .conteudo_apresentacao a {
     border-radius: 25px;
@@ -126,22 +143,24 @@ button,
     width: fit-content;
 }
 
+/* Efeito hover para botões e links */
 button:hover,
 .conteudo_apresentacao a:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #0096c7, #023e8a);
 }
 
+/* Imagem da apresentação com largura fixa e animação */
 .imagem_apresentacao {
     width: 300px;
     height: auto;
     animation: imagem_efeito 3s infinite ease-in-out;
 }
 
-
 /* ==============================
     SOBRE MIM
 ================================= */
+/* Container principal da seção sobre mim com flexbox e espaçamento */
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -151,10 +170,12 @@ button:hover,
     gap: 30px;
 }
 
+/* Card da seção sobre mim com margem */
 .card-sobremim {
     margin: 80px;
 }
 
+/* Imagem do perfil com largura, borda arredondada e sombra */
 #imagem_perfil {
     width: 280px;
     border-radius: 20px;
@@ -162,27 +183,32 @@ button:hover,
     transition: 0.3s;
 }
 
+/* Efeito hover para imagem do perfil */
 #imagem_perfil:hover {
     transform: scale(1.05);
 }
 
+/* Texto da seção sobre mim com largura máxima e alinhamento justificado */
 .sobremim {
     max-width: 600px;
     text-align: justify;
 }
 
+/* Título da seção sobre mim */
 .sobremim h2 {
     color: #00BFFF;
     font-size: 2.2em;
     margin-bottom: 15px;
 }
 
+/* Parágrafo da seção sobre mim */
 .sobremim p {
     color: #b3b6b8;
     font-size: 1.1em;
     line-height: 1.6em;
 }
 
+/* Esconde o botão de toggle do menu por padrão */
 .menu-toggle {
     display: none;
 }
@@ -190,6 +216,7 @@ button:hover,
 /* ==============================
     CONHECIMENTOS
 ================================= */
+/* Título da página centralizado e estilizado */
 .titulo_pagina {
     text-align: center;
     color: #00BFFF;
@@ -197,6 +224,7 @@ button:hover,
     margin-bottom: 30px;
 }
 
+/* Container dos conhecimentos com flexbox em coluna e espaçamento */
 .conhecimentos {
     display: flex;
     flex-direction: column;
@@ -205,6 +233,7 @@ button:hover,
     padding: 50px 20px;
 }
 
+/* Container dos cards com flex-wrap e espaçamento */
 .cards_container {
     display: flex;
     flex-wrap: wrap;
@@ -213,6 +242,7 @@ button:hover,
     width: 100%;
 }
 
+/* Estilo dos cards de conhecimento */
 .cards {
     background-color: #1c1c1c;
     width: 300px;
@@ -223,21 +253,25 @@ button:hover,
     transition: 0.3s;
 }
 
+/* Efeito hover para os cards */
 .cards:hover {
     transform: scale(1.08);
     background-color: #2c2c2c;
 }
 
+/* Título dentro dos cards */
 .cards h3 {
     color: #eaeaea;
     margin: 10px 0;
 }
 
+/* Parágrafo dentro dos cards */
 .cards p {
     font-size: 0.95em;
     line-height: 1.4em;
 }
 
+/* Imagem dentro dos cards com largura fixa */
 .imagem_card {
     width: 140px;
 }
@@ -245,6 +279,7 @@ button:hover,
 /* ==============================
     CONTATO
 ================================= */
+/* Card de contato com fundo claro, borda arredondada e padding */
 .card-contato {
     background-color: #e1e6e9;
     width: 80%;
@@ -255,6 +290,7 @@ button:hover,
     align-items: center;
 }
 
+/* Formulário de contato com flexbox em coluna e espaçamento */
 #formContato {
     display: flex;
     flex-direction: column;
@@ -263,6 +299,7 @@ button:hover,
     max-width: 500px;
 }
 
+/* Inputs, selects e textarea com largura total, padding e borda arredondada */
 select,
 input,
 textarea {
@@ -273,25 +310,29 @@ textarea {
     font-size: 1em;
 }
 
+/* Estilo dos labels */
 label {
     font-size: 1em;
     color: #333;
 }
 
+/* Placeholder do textarea com tamanho maior */
 textarea::placeholder {
     font-size: 1.2em;
 }
 
+/* Botão de enviar mensagem alinhado ao centro */
 #enviarmensagem {
     align-self: center;
 }
 
-
+/* Fundo com efeito circular azul */
 .fundo-efeito {
     background-color: #0077b6;
     border-radius: 50%;
 }
 
+/* Cards de projetos com estilo similar aos cards de conhecimento */
 .cards_projeto1,
 .cards_projeto2,
 .cards_projeto3,
@@ -307,17 +348,20 @@ textarea::placeholder {
     cursor: pointer;
 }
 
+/* Títulos dentro dos cards de projetos */
 .cards_projetos h2,
 h3 {
     margin: 10px 0;
 }
 
+/* Imagem dos cards de projetos com largura e altura fixas e borda arredondada */
 .imagem_card_projetos {
     width: 100%;
     height: 400px;
     border-radius: 15px;
 }
 
+/* Links dos projetos com cor branca, sem sublinhado e fonte em negrito */
 .link-projeto {
     color: white;
     text-decoration: none;
@@ -326,6 +370,7 @@ h3 {
     transition: 0.3s;
 }
 
+/* Botões dos projetos escondidos por padrão */
 .botao_projeto1,
 .botao_projeto2,
 .botao_projeto3,
@@ -335,13 +380,10 @@ h3 {
     display: none;
 }
 
-
-
-
-
 /* ==============================
     ANIMAÇÃO
 ================================= */
+/* Animação para imagem da apresentação com escala e rotação */
 @keyframes imagem_efeito {
     0% {
         transform: scale(1) rotate(0deg);
@@ -359,9 +401,10 @@ h3 {
 /* ==============================
     RESPONSIVIDADE
 ================================= */
-/* Mobile */
+/* Estilos para telas com largura máxima de 768px (mobile) */
 @media (max-width: 768px) {
 
+    /* Exibe os botões dos projetos no mobile */
     .botao_projeto1,
     .botao_projeto2,
     .botao_projeto3,
@@ -369,12 +412,14 @@ h3 {
         display: block;
     }
 
+    /* Ajusta navbar para mobile */
     .navbar {
         justify-content: space-between;
         align-items: center;
         padding: 20px 25px;
     }
 
+    /* Esconde links de navegação inicialmente */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -388,6 +433,7 @@ h3 {
         z-index: 999;
     }
 
+    /* Exibe links de navegação quando a classe show é adicionada */
     .nav-links.show {
         display: flex;
         flex-direction: column;
@@ -395,7 +441,7 @@ h3 {
         gap: 20px;
     }
 
-    /* Regra de estilo para a lista de links principal */
+    /* Lista principal de links em coluna e centralizada */
     .nav-principal {
         flex-direction: column;
         width: 100%;
@@ -403,18 +449,16 @@ h3 {
         text-align: center;
     }
 
-    /* Regra de estilo específica para os links sociais */
+    /* Links sociais em linha, centralizados e com espaçamento */
     .nav-social-links {
         flex-direction: row;
-        /* Altera para linha */
         justify-content: center;
-        /* Centraliza os ícones */
         gap: 25px;
-        /* Adiciona espaço entre eles */
         width: 100%;
         margin-top: 20px;
     }
 
+    /* Botão toggle do menu com estilo flex e dimensões */
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -428,6 +472,7 @@ h3 {
         z-index: 1001;
     }
 
+    /* Barras do hamburger */
     .hamburger {
         display: block;
         width: 100%;
@@ -437,6 +482,7 @@ h3 {
         transition: all 0.3s ease-in-out;
     }
 
+    /* Animação das barras do hamburger quando menu está aberto */
     .menu-toggle[aria-expanded="true"] .hamburger:nth-child(1) {
         transform: translateY(11px) rotate(45deg);
     }
@@ -449,6 +495,7 @@ h3 {
         transform: translateY(-11px) rotate(-45deg);
     }
 
+    /* Ajusta containers para coluna e centraliza texto */
     .container,
     .container_apresentacao {
         flex-direction: column;
@@ -457,6 +504,7 @@ h3 {
         margin: 0;
     }
 
+    /* Ajusta tamanhos de fonte para títulos e textos na apresentação */
     .container_apresentacao h2 {
         font-size: 1.5em;
     }
@@ -469,20 +517,23 @@ h3 {
         font-size: 0.8em;
     }
 
-
+    /* Centraliza links na apresentação */
     .container_apresentacao a {
         align-self: center;
     }
 
+    /* Fundo com efeito circular azul */
     .fundo-efeito {
         background-color: #0077b6;
         border-radius: 50%;
     }
 
+    /* Ajusta largura da seção sobre mim */
     .sobremim {
         width: 90%;
     }
 
+    /* Ajusta título e parágrafo da seção sobre mim */
     .sobremim h2 {
         font-size: 1.5em;
         text-align: center;
@@ -492,55 +543,58 @@ h3 {
         font-size: 1em;
     }
 
-
+    /* Ajusta tamanho da imagem da apresentação */
     .imagem_apresentacao {
         width: 220px;
         height: auto;
     }
 
+    /* Ajusta largura da imagem do perfil */
     #imagem_perfil {
         width: 60%;
     }
 
+    /* Ajusta largura dos cards */
     .cards {
         width: 90%;
     }
 
+    /* Ajusta largura do card de contato */
     .card-contato {
         width: 95%;
     }
 
+    /* Ajusta tamanho do placeholder */
     ::placeholder {
         font-size: 0.8em;
     }
 
+    /* Exibe botões dos projetos no mobile */
     .botao_projeto1,
     .botao_projeto2,
     .botao_projeto3,
     .botao_projeto4 {
         display: block;
     }
-
-
-
-
 }
 
-/* Ajustes para telas maiores que mobile */
+/* Ajustes para telas maiores que mobile (mínimo 769px) */
 @media (min-width: 769px) {
+    /* Exibe links de navegação como flex */
     .nav-links {
         display: flex;
         align-items: center;
         gap: 25px;
     }
 
+    /* Exibe listas principais e sociais como flex */
     .nav-principal,
     .nav-social {
         display: flex;
     }
 
+    /* Esconde botão toggle do menu */
     .menu-toggle {
         display: none;
     }
-
 }
